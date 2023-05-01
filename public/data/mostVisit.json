@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Youtube",
+    "url": "https://www.youtube.com/"
+  },
+  {
+    "id": 2,
+    "name": "Github",
+    "url": "https://www.github.com"
+  },
+  {
+    "id": 3,
+    "name": "Calendar",
+    "url": "https://calendar.google.com/calendar/r"
+  },
+  {
+    "id": 4,
+    "name": "Mail",
+    "url": "https://mail.google.com/mail/u/0/#inbox/"
+  },
+  {
+    "id": 5,
+    "name": "Notion",
+    "url": "https://www.notion.so/"
+  },
+  {
+    "id": 6,
+    "name": "Instagram",
+    "url": "https://www.instagram.com/"
+  }
+]
