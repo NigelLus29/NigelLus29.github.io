@@ -105,7 +105,7 @@ setInterval(() => {
 
 /* weather */
 
-let iconElement = ref("icons/Nord/unknown.png");
+let iconElement = ref("icons/OneDark/unknown.png");
 let tempElement = ref("");
 let descElement = ref("");
 // App data
@@ -132,7 +132,7 @@ const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon
 
 // Display Weather info
 function displayWeather() {
-  iconElement = `icons/Nord/${weather.iconId}.png` as any;
+  iconElement = `icons/OneDark/${weather.iconId}.png` as any;
   tempElement = `${weather.temperature.value}°` as any;
   descElement = weather.description! as any;
 }
