@@ -1,5 +1,7 @@
 # Vue 3 + TypeScript + Vite
 
+![license](https://img.shields.io/github/license/NigelLus29/NigelLus29.github.io)![issues](https://img.shields.io/github/issues/NigelLus29/NigelLus29.github.io)![stars](https://img.shields.io/github/stars/NigelLus29/NigelLus29.github.io)![forks](https://img.shields.io/github/forks/NigelLus29/NigelLus29.github.io)
+
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 ## Recommended IDE Setup
