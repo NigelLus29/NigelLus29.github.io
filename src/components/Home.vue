@@ -37,9 +37,11 @@
 				<li
 					v-for="website in MostVisitWebsite"
 					:key="website.id"
-					class="studyingWebsite"
+					class="mostVisitWebsite"
 				>
-					<a :href="website.url">{{ website.name }}</a>
+					<a :href="website.url"
+						><vue-feather :type="website.name" size="40"></vue-feather
+					></a>
 				</li>
 			</ul>
 		</div>
@@ -47,6 +49,7 @@
 		<!-- Lists -->
 		<div class="cardList1">
 			<ul>
+				<vue-feather type="coffee" size="40"></vue-feather>
 				<li
 					v-for="website in SocialMediaWebsite"
 					:key="website.id"
@@ -59,6 +62,7 @@
 
 		<div class="cardList2">
 			<ul>
+				<vue-feather type="film" size="40"></vue-feather>
 				<li
 					v-for="website in EntertainmentWebsite"
 					:key="website.id"
@@ -72,6 +76,8 @@
 </template>
 
 <script setup lang="ts">
+import feather from "feather-icons";
+feather.replace();
 import { ref } from "vue";
 
 /* time */
@@ -359,6 +365,7 @@ body {
 	transition: all 0.3s ease-in-out;
 	box-sizing: border-box;
 	border-radius: 7px;
+	color: #c6d0f5;
 }
 
 .buttonLink a:hover {
@@ -375,7 +382,7 @@ body {
 	background-color: #2e3440;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 7px;
-	padding: 50px;
+	padding: 40px;
 	width: 270px;
 	height: 340px;
 	overflow: auto;
@@ -387,7 +394,7 @@ body {
 	background-color: #2e3440;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 7px;
-	padding: 50px;
+	padding: 40px;
 	width: 270px;
 	height: 340px;
 	overflow: auto;
