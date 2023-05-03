@@ -35,7 +35,7 @@
 		<div class="buttonLink">
 			<ul>
 				<li
-					v-for="website in MostVisitWebsite"
+					v-for="website in buttonLinkWebsite"
 					:key="website.id"
 					class="buttonLinkWebsite"
 				>
@@ -49,7 +49,7 @@
 			<ul>
 				<img :src="cardListIcon" />
 				<li
-					v-for="website in SocialMediaWebsite"
+					v-for="website in cardList1Website"
 					:key="website.id"
 					class="cardList1Website"
 				>
@@ -62,7 +62,7 @@
 			<ul>
 				<img :src="cardListIcon2" />
 				<li
-					v-for="website in EntertainmentWebsite"
+					v-for="website in cardList2Website"
 					:key="website.id"
 					class="cardList2Website"
 				>
