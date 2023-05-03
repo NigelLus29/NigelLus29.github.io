@@ -127,10 +127,10 @@ weather.temperature = {
 // change to "F" for Fahrenheit
 const tempUnit = "C";
 const KELVIN = 273.15;
-const latitude = 25.0497;
-const longitude = 121.5768;
-const key = "af8925c7d159350bb0e1c9d34b33aa42";
-const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+const LATITUDE = import.meta.env.VITE_LATITUDE;
+const LONGITUDE = import.meta.env.VITE_LONGITUDE;
+const WEATHER_API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+const api = `https://api.openweathermap.org/data/2.5/weather?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${WEATHER_API_KEY}`;
 
 // Display Weather info
 function displayWeather() {
