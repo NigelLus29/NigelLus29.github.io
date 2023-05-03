@@ -390,7 +390,7 @@ body {
   border-radius: 7px;
   padding: 40px;
   width: 270px;
-  height: 340px;
+  height: 360px;
   overflow: auto;
 }
 .cardList2 {
@@ -402,7 +402,7 @@ body {
   border-radius: 7px;
   padding: 40px;
   width: 270px;
-  height: 340px;
+  height: 360px;
   overflow: auto;
 }
 
