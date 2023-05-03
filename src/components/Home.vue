@@ -37,11 +37,9 @@
 				<li
 					v-for="website in MostVisitWebsite"
 					:key="website.id"
-					class="mostVisitWebsite"
+					class="buttonLinkWebsite"
 				>
-					<a :href="website.url"
-						><vue-feather :type="website.name" size="40"></vue-feather
-					></a>
+					<a :href="website.url"><img :src="website.icon" /></a>
 				</li>
 			</ul>
 		</div>
@@ -49,11 +47,11 @@
 		<!-- Lists -->
 		<div class="cardList1">
 			<ul>
-				<vue-feather type="coffee" size="40"></vue-feather>
+				<img :src="cardListIcon" />
 				<li
 					v-for="website in SocialMediaWebsite"
 					:key="website.id"
-					class="socialMediaWebsite"
+					class="cardList1Website"
 				>
 					<a :href="website.url">{{ website.name }}</a>
 				</li>
@@ -62,11 +60,11 @@
 
 		<div class="cardList2">
 			<ul>
-				<vue-feather type="film" size="40"></vue-feather>
+				<img :src="cardListIcon2" />
 				<li
 					v-for="website in EntertainmentWebsite"
 					:key="website.id"
-					class="entertainmentWebsite"
+					class="cardList2Website"
 				>
 					<a :href="website.url">{{ website.name }}</a>
 				</li>
@@ -76,8 +74,6 @@
 </template>
 
 <script setup lang="ts">
-import feather from "feather-icons";
-feather.replace();
 import { ref } from "vue";
 
 /* time */
@@ -170,11 +166,12 @@ interface Website {
 	id: number;
 	name: string;
 	url: string;
+	icon: string;
 }
 
-const MostVisitWebsite = ref<Website[]>([{ id: 0, name: "", url: "" }]);
-const SocialMediaWebsite = ref<Website[]>([{ id: 0, name: "", url: "" }]);
-const EntertainmentWebsite = ref<Website[]>([{ id: 0, name: "", url: "" }]);
+const buttonLinkWebsite = ref<Website[]>();
+const cardList1Website = ref<Website[]>();
+const cardList2Website = ref<Website[]>();
 
 const loadJSON = async (path: string, dataTarget: any) => {
 	const response = await fetch(path);
@@ -183,9 +180,12 @@ const loadJSON = async (path: string, dataTarget: any) => {
 	// dataTarget = dataTarget as { id: number; name: string; url: string }[];
 };
 
-loadJSON("./data/socialMedia.json", SocialMediaWebsite);
-loadJSON("./data/mostVisit.json", MostVisitWebsite);
-loadJSON("./data/entertainment.json", EntertainmentWebsite);
+loadJSON("./data/buttonLink.json", buttonLinkWebsite);
+loadJSON("./data/cardList1.json", cardList1Website);
+loadJSON("./data/cardList2.json", cardList2Website);
+
+const cardListIcon = ref("icons/SVGs/coffee.svg");
+const cardListIcon2 = ref("icons/SVGs/film.svg");
 
 /* Greeting */
 
@@ -219,8 +219,6 @@ if (time.hours >= 23 && time.hours < 5) {
 
 body {
 	font-family: "Open Sans", sans-serif;
-	background-color: #1e1e1e;
-	color: #fff;
 	font-size: 1.2rem;
 	line-height: 1.5;
 	transition: 0.2s ease-in-out;
@@ -275,6 +273,7 @@ body {
 .timeBlock {
 	grid-column: 1 / span 4;
 	grid-row: 1;
+	color: #c6d0f5;
 }
 
 .clock {
@@ -297,6 +296,7 @@ body {
 .weatherBlock {
 	grid-column: 5 / span 8;
 	grid-row: 1;
+	color: #c6d0f5;
 }
 
 .weatherBlockDate {
